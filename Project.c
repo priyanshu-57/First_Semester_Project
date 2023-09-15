@@ -4,6 +4,58 @@
 #include<string.h>
 #include<stdlib.h>
 #include<dos.h>
+
+void login()
+{
+
+char username[] = "user";
+    char password[] = "pass";
+	//	FILE *p;
+    char enteredUsername[50];
+    char enteredPassword[50];
+   /* p=fopen("login.txt","w");
+			if(p==NULL)
+			{
+				printf("ERROR!!...FILE COULDNOT BE OPENED");
+				exit(0);
+			} */
+    
+    printf("Enter your username: ");
+    scanf("%s", enteredUsername);
+
+    if (strcmp(enteredUsername, username) == 0) {
+        printf("Enter your password: ");
+        
+        // Clear any remaining newline characters from the input buffer
+        while (getchar() != '\n');
+
+        // Read the password character by character without displaying them
+        int i = 0;
+        char ch;
+        while (i<50) {
+            ch = getch();  // Use getch() to read characters without echoing
+            if (ch == '\n' || ch == '\r') {
+                enteredPassword[i] = '\0';  // Null-terminate the password
+                break;
+            } else {
+                enteredPassword[i++] = ch;
+                printf("*");  // Display an asterisk for each character
+            }
+        }
+
+        if (strcmp(enteredPassword, password) == 0) {
+            printf("\nLogin successful!\n");
+        	//fclose(p);
+        } else {
+            printf("\nLogin failed. Incorrect password.\n");
+        }
+
+        // Clear the enteredPassword array to remove the actual password from memory
+       // memset(enteredPassword, 0, sizeof(enteredPassword));
+    } else {
+        printf("Login failed. Incorrect username.\n");
+    }
+}
 struct contact
 
 {
@@ -24,6 +76,8 @@ int main()
 
 
 	system("cls");
+	
+	system("cls");
     printf("\n\n\n\n\t\t\t\t\t\t************************************************\n");
     printf("\t\t\t\t\t\t|                                               |\n");
     printf("\t\t\t\t\t\t|       ------------------------------          |\n");
@@ -37,7 +91,8 @@ int main()
     getch();
 
     system("cls"); 
-	  
+	login();
+	system("cls");  
 main:
 	                   /* ***********Main menu **********************  */
 
