@@ -15,11 +15,11 @@ void login() {
     
     start:
    
-    printf("Enter your username: ");
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tEnter your username: ");
     scanf("%s", enteredUsername);
 	
     if (strcmp(enteredUsername, username) == 0) {
-        printf("Enter your password: ");
+        printf("\n\t\t\t\t\t\t\tEnter your password: ");
         
         // Clear any remaining newline characters from the input buffer
         while (getchar() != '\n');
@@ -39,19 +39,19 @@ void login() {
         }
 
         if (strcmp(enteredPassword, password) == 0) {
-            printf("\nLogin successful!\n");
+            printf("\n\n\n\t\t\t\t\t\t\tLogin successful!\n");
         	
         	getch(); // Holds the screen
         	system("cls");
         } else {
-            printf("\nLogin failed. Incorrect password.\n");
+            printf("\n\n\n\t\t\t\t\t\t\tLogin failed. Incorrect password.\n");
             getch(); // Holds the screen
             system("cls");
             goto start;
         }
 
     } else {
-        printf("Login failed. Incorrect username.\n");
+        printf("\n\n\n\t\t\t\t\t\t\tLogin failed. Incorrect username.\n");
         getch(); // Holds the screen
         system("cls");
         goto start;
@@ -81,18 +81,18 @@ int main()
 	system("cls");
 	system("color B5");
 	
-    printf("\n\n\n\n\t\t\t\t\t************************************************\n");
-    printf("\t\t\t\t\t================================================\n");
-    printf("\t\t\t\t\t||                                             ||\n");
-    printf("\t\t\t\t\t||       ------------------------------        ||\n");
-    printf("\t\t\t\t\t||      **Contact Management System**          ||\n");
-    printf("\t\t\t\t\t||      ------------------------------         ||\n");
-    printf("\t\t\t\t\t||                                             ||\n");
-    printf("\t\t\t\t\t||                                             ||\n");
-    printf("\t\t\t\t\t||                                             ||\n");
-    printf("\t\t\t\t\t================================================\n");
-    printf("\t\t\t\t\t************************************************\n\n\n");
-    printf(" \n\t\t\t\t Press any key to continue:");
+    printf("\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t************************************************\n");
+    printf("\t\t\t\t\t\t\t================================================\n");
+    printf("\t\t\t\t\t\t\t||                                             ||\n");
+    printf("\t\t\t\t\t\t\t||       ------------------------------        ||\n");
+    printf("\t\t\t\t\t\t\t||      **Contact Management System**          ||\n");
+    printf("\t\t\t\t\t\t\t||      ------------------------------         ||\n");
+    printf("\t\t\t\t\t\t\t||                                             ||\n");
+    printf("\t\t\t\t\t\t\t||                                             ||\n");
+    printf("\t\t\t\t\t\t\t||                                             ||\n");
+    printf("\t\t\t\t\t\t\t================================================\n");
+    printf("\t\t\t\t\t\t\t************************************************\n\n\n");
+    printf(" \n\n\n\t\t\t\t\t\t\t Press any key to continue:");
     getch();
 
     system("cls"); 
@@ -101,26 +101,26 @@ int main()
 main:
 	                   /* ***********Main menu **********************  */
 
-	printf("\n\n\t================================================\n");
-    printf("\t ** Welcome to Contact Management System **");
-    printf("\n\t================================================\n");
+	printf("\n\t\t\t\t\t\t\t================================================\n");
+    printf("\t\t\t\t\t\t\t ** Welcome to Contact Management System **");
+    printf("\n\t\t\t\t\t\t\t================================================\n");
 
-    printf("\n\n\n\t\t\t**MAIN MENU** ");
-    printf("\n\t\t**************************");
-    printf("\n\t\t[1] Add a new Contact");
-    printf("\n\t\t[2] List all the Contacts");
-    printf("\n\t\t[3] Search for contact");
-    printf("\n\t\t[4] Edit a Contact");
-    printf("\n\t\t[5] Delete a Contact");
-    printf("\n\t\t[0] Exit");
-    printf("\n\t\t**************************\n\t\t");
-    printf("Enter your  choice Between (0-5): ");
+    printf("\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t**MAIN MENU** ");
+    printf("\n\t\t\t\t\t\t\t\t**************************");
+    printf("\n\t\t\t\t\t\t\t\t[1] Add a new Contact");
+    printf("\n\t\t\t\t\t\t\t\t[2] List all the Contacts");
+    printf("\n\t\t\t\t\t\t\t\t[3] Search for contact");
+    printf("\n\t\t\t\t\t\t\t\t[4] Edit a Contact");
+    printf("\n\t\t\t\t\t\t\t\t[5] Delete a Contact");
+    printf("\n\t\t\t\t\t\t\t\t[0] Exit");
+    printf("\n\t\t\t\t\t\t\t\t**************************\n\t\t");
+    printf("\t\t\t\t\t\tEnter your  choice Between (0-5): ");
     scanf("%d",&ch);
     switch(ch)
     {
     case 0:
 
-        printf("\n\n\t\tAre you sure you want to exit?");
+        printf("\n\n\t\t\t\t\t\t\tAre you sure you want to exit?");
 
         break;
 
@@ -137,9 +137,9 @@ main:
         {
             fflush(stdin);
 
-            printf("\n\n\n\tTo get exit option:   ");
-            printf("\n\tPlease enter space and enter.. ");
-            printf("\n\tName (Use identical):");
+            printf("\n\n\n\t\t\t\t\t\t\t\tTo get exit option:   ");
+            printf("\n\t\t\t\t\t\t\t\tPlease enter space and enter.. ");
+            printf("\n\t\t\t\t\t\t\t\tName (Use identical):");
             scanf("%[^\n]",&list.name);
 
             if(stricmp(list.name,"")==0 || stricmp(list.name," ")==0)
@@ -147,17 +147,17 @@ main:
 
             fflush(stdin);
 
-            printf("\tPhone:");
+            printf("\t\t\t\t\t\t\t\tPhone:");
             scanf("%ld",&list.ph);
 
             fflush(stdin);
 
-            printf("\taddress:");
+            printf("\t\t\t\t\t\t\t\taddress:");
             scanf("%[^\n]",&list.add);
 
             fflush(stdin);
 
-            printf("\temail address:");
+            printf("\t\t\t\t\t\t\t\temail address:");
             gets(list.email);
 
             printf("\n");
@@ -200,7 +200,7 @@ main:
 
                 {
 
-                    printf("\nName\t: %s\nPhone\t: %ld\nAddress\t: %s\nEmail\t: %s\n",list.name,list.ph,list.add,list.email);
+                    printf("\n%d. \nName\t: %s\nPhone\t: %ld\nAddress\t: %s\nEmail\t: %s\n",i-96,list.name,list.ph,list.add,list.email);
                     found++;
 
                 }
@@ -233,9 +233,9 @@ main:
 
             found=0;
 
-            printf("\n\n\t\t**CONTACT SEARCH**");
-            printf("\n\t\t =========================== ");
-            printf("\n\t\t Name of contact to search: ");
+            printf("\n\n\t\t\t\t\t\t\t\t**CONTACT SEARCH**");
+            printf("\n\t\t\t\t\t\t\t\t =========================== ");
+            printf("\n\t\t\t\t\t\t\t\t Name of contact to search: ");
             
             fflush(stdin);
 
@@ -247,7 +247,7 @@ main:
 
             system("cls");
 
-            printf("\n\n\t\t Search result for '%s' \n===================================================\n",query);
+            printf("\n\n\t\t\t\t\t\t\t\t Search result for '%s' \n===================================================\n",query);
 
             while(fread(&list,sizeof(list),1,fp)==1)
 
@@ -311,9 +311,9 @@ main:
 
         fflush(stdin);
 
-        printf("\n\n\t\t **Edit Contact** ");
-        printf("\n\n\t===============================");
-        printf("\n\t Enter the name of contact to edit: ");
+        printf("\n\n\t\t\t\t\t\t\t\t **Edit Contact** ");
+        printf("\n\n\t\t\t\t\t\t\t\t===============================");
+        printf("\n\t\t\t\t\t\t\t\t Enter the name of contact to edit: ");
         scanf("%[^\n]",name);
 
         while(fread(&list,sizeof(list),1,fp)==1)
@@ -328,24 +328,24 @@ main:
 
         fflush(stdin);
 
-        printf("\n\n Editing '%s'\n\n",name);
+        printf("\t\t\t\t\t\t\t\t Editing '%s'\n\n",name);
 
-        printf("Name(Use identical):");
+        printf("\t\t\t\t\t\t\t\tName(Use identical):");
         scanf("%[^\n]",&list.name);
 
         fflush(stdin);
 
-        printf("..::Phone:");
+        printf("\t\t\t\t\t\t\t\t..::Phone:");
          scanf("%ld",&list.ph);
 
         fflush(stdin);
 
-        printf("..::address:");
+        printf("\t\t\t\t\t\t\t\t..::address:");
         scanf("%[^\n]",&list.add);
 
         fflush(stdin);
 
-        printf("..::email address:");
+        printf("\t\t\t\t\t\t\t\t..::email address:");
         gets(list.email);
 
         printf("\n");
@@ -403,9 +403,10 @@ main:
 
     }
 
-    printf("\n\n\t\tEnter the Choice:");
-    printf("\n\n\t\t[1] Main Menu");
-    printf("\n\n\t\t[0] Exit\n");
+    printf("\n\n\t\t\t\t\t\t\t\tEnter the Choice:");
+    printf("\n\n\t\t\t\t\t\t\t\t[1] Main Menu");
+    printf("\n\n\t\t\t\t\t\t\t\t[0] Exit");
+    printf("\n\n\t\t\t\t\t\t\t\t Choice: ");
     scanf("%d",&ch);
 
     switch (ch)
