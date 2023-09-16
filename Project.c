@@ -48,6 +48,7 @@ void login() {
             printf("\n\n\n\t\t\t\t\t\t\tLogin failed. Incorrect password.\n");
             getch(); // Holds the screen
             system("cls");
+            printf("\n\n\t\t\t\t\t\t\tRetype username & password::\n");
             goto start;
         }
 
@@ -55,6 +56,7 @@ void login() {
         printf("\n\n\n\t\t\t\t\t\t\tLogin failed. Incorrect username.\n");
         getch(); // Holds the screen
         system("cls");
+        printf("\n\n\t\t\t\t\t\t\tRetype username::\n");
         goto start;
     }
    
