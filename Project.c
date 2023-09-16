@@ -5,24 +5,19 @@
 #include<stdlib.h>
 #include<dos.h>
 
-void login()
-{
-
-char username[] = "user";
+void login() {
+    char username[] = "user";
     char password[] = "pass";
-	//	FILE *p;
+    
+	 
     char enteredUsername[50];
     char enteredPassword[50];
-   /* p=fopen("login.txt","w");
-			if(p==NULL)
-			{
-				printf("ERROR!!...FILE COULDNOT BE OPENED");
-				exit(0);
-			} */
     
+    start:
+   
     printf("Enter your username: ");
     scanf("%s", enteredUsername);
-
+	
     if (strcmp(enteredUsername, username) == 0) {
         printf("Enter your password: ");
         
@@ -32,7 +27,7 @@ char username[] = "user";
         // Read the password character by character without displaying them
         int i = 0;
         char ch;
-        while (i<50) {
+        while (i < 50) {
             ch = getch();  // Use getch() to read characters without echoing
             if (ch == '\n' || ch == '\r') {
                 enteredPassword[i] = '\0';  // Null-terminate the password
@@ -45,17 +40,25 @@ char username[] = "user";
 
         if (strcmp(enteredPassword, password) == 0) {
             printf("\nLogin successful!\n");
-        	//fclose(p);
+        	
+        	getch(); // Holds the screen
+        	system("cls");
         } else {
             printf("\nLogin failed. Incorrect password.\n");
+            getch(); // Holds the screen
+            system("cls");
+            goto start;
         }
 
-        // Clear the enteredPassword array to remove the actual password from memory
-       // memset(enteredPassword, 0, sizeof(enteredPassword));
     } else {
         printf("Login failed. Incorrect username.\n");
+        getch(); // Holds the screen
+        system("cls");
+        goto start;
     }
+   
 }
+
 struct contact
 
 {
@@ -76,17 +79,19 @@ int main()
 
 
 	system("cls");
+	system("color 94");
 	
-	system("cls");
-    printf("\n\n\n\n\t\t\t\t\t\t************************************************\n");
-    printf("\t\t\t\t\t\t|                                               |\n");
-    printf("\t\t\t\t\t\t|       ------------------------------          |\n");
-    printf("\t\t\t\t\t\t|       **Contact Management System**           |\n");
-    printf("\t\t\t\t\t\t|       ------------------------------          |\n");
-    printf("\t\t\t\t\t\t|                                               |\n");
-    printf("\t\t\t\t\t\t|                                               |\n");
-    printf("\t\t\t\t\t\t|                                               |\n");
-    printf("\t\t\t\t\t\t************************************************\n\n\n");
+    printf("\n\n\n\n\t\t\t\t\t************************************************\n");
+    printf("\t\t\t\t\t================================================\n");
+    printf("\t\t\t\t\t||                                             ||\n");
+    printf("\t\t\t\t\t||       ------------------------------        ||\n");
+    printf("\t\t\t\t\t||      **Contact Management System**          ||\n");
+    printf("\t\t\t\t\t||      ------------------------------         ||\n");
+    printf("\t\t\t\t\t||                                             ||\n");
+    printf("\t\t\t\t\t||                                             ||\n");
+    printf("\t\t\t\t\t||                                             ||\n");
+    printf("\t\t\t\t\t================================================\n");
+    printf("\t\t\t\t\t************************************************\n\n\n");
     printf(" \n\t\t\t\t Press any key to continue:");
     getch();
 
@@ -96,7 +101,9 @@ int main()
 main:
 	                   /* ***********Main menu **********************  */
 
-    printf("\n\n\t ** Welcome to Contact Management System **");
+	printf("\n\n\t================================================\n");
+    printf("\t ** Welcome to Contact Management System **");
+    printf("\n\t================================================\n");
 
     printf("\n\n\n\t\t\t**MAIN MENU** ");
     printf("\n\t\t**************************");
@@ -130,7 +137,8 @@ main:
         {
             fflush(stdin);
 
-            printf("\n\n\n\tTo get exit option enter blank space in the name input");
+            printf("\n\n\n\tTo get exit option:   ");
+            printf("\n\tPlease enter space and enter.. ");
             printf("\n\tName (Use identical):");
             scanf("%[^\n]",&list.name);
 
@@ -423,3 +431,4 @@ main:
     return 0;
 
 }
+
