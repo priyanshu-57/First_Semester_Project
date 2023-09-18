@@ -4,7 +4,7 @@
 #include<process.h>
 #include<string.h>
 #include<stdlib.h>
-//#include<dos.h>
+
 
 void login() {
     char username[] = "user";
@@ -203,7 +203,7 @@ main:
 
                 {
 
-                    printf("\nName\t: %s\nPhone\t: %ld\nAddress\t: %s\nEmail\t: %s\n",i-96,list.name,list.ph,list.add,list.email);
+                    printf("\nName\t: %s\nPhone\t: %ld\nAddress\t: %s\nEmail\t: %s\n",list.name,list.ph,list.add,list.email);
                     found++;
 
                 }
